@@ -33,9 +33,12 @@ This folder is **not** synced by Wix's git integration (only `src/backend`,
 Wix site embeds:
 
 1. Deploy `site/` to a static host and note its URL.
-2. In the Wix Studio editor, add one full-bleed HTML iframe / Custom
-   Element to the Home page (this can't be done via git — it's a one-time
-   manual placement), and set its element ID to `staticSiteFrame`.
+2. In the Wix Studio editor, add one full-bleed "Embed a Site" iframe to
+   the Home page inside a single `100vh` / zero-padding section (this
+   can't be done via git — it's a one-time manual placement), with the
+   element ID `staticSiteFrameV1`. Studio requires every element to live
+   in a section; that one section holding one full-fill iframe is the
+   entire Wix page.
 3. Update `STATIC_SITE_URL` in `src/pages/Home.c1dmp.js` to the deployed
    URL and push.
 

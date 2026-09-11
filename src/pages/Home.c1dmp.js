@@ -7,14 +7,15 @@
 // outside Wix. Visitors never leave this one Wix page — the embed below
 // carries them through the coded site's own internal navigation.
 //
-// One-time manual step (git can't place page elements): in the Studio
-// editor, add a full-bleed HTML iframe / Custom Element on this page and
-// set its ID to `staticSiteFrame`, then update STATIC_SITE_URL below to
-// wherever /site is deployed.
+// The embed element itself was placed manually in the Studio editor (git
+// can't place page elements) as a full-bleed "Embed a Site" iframe inside
+// a 100vh section, with the element ID `staticSiteFrameV1`. If that ID is
+// ever renamed in the editor, FRAME_ID below has to change with it.
+const FRAME_ID = "#staticSiteFrameV1";
 const STATIC_SITE_URL = "https://REPLACE-WITH-HOSTED-STATIC-SITE-URL/";
 
 $w.onReady(function () {
-    const frame = $w("#staticSiteFrame");
+    const frame = $w(FRAME_ID);
     if (frame) {
         frame.src = STATIC_SITE_URL;
     }
