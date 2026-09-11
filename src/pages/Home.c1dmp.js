@@ -12,7 +12,10 @@
 // a 100vh section, with the element ID `staticSiteFrameV1`. If that ID is
 // ever renamed in the editor, FRAME_ID below has to change with it.
 const FRAME_ID = "#staticSiteFrameV1";
-const STATIC_SITE_URL = "https://REPLACE-WITH-HOSTED-STATIC-SITE-URL/";
+// Served by GitHub Pages from this repo's `gh-pages` branch, which holds
+// the contents of /site at its root. Redeploy by copying /site onto that
+// branch — /site stays the source of truth.
+const STATIC_SITE_URL = "https://brandonmorley13.github.io/HuckleBerryLodge/";
 
 $w.onReady(function () {
     const frame = $w(FRAME_ID);

@@ -32,7 +32,11 @@ This folder is **not** synced by Wix's git integration (only `src/backend`,
 `src/pages`, and `src/public` are). It's a separate static deploy that the
 Wix site embeds:
 
-1. Deploy `site/` to a static host and note its URL.
+1. Deploy `site/` to a static host and note its URL. Currently deployed
+   to GitHub Pages at <https://brandonmorley13.github.io/HuckleBerryLodge/>,
+   served from this repo's `gh-pages` branch, which holds the contents of
+   `site/` at its root plus a `.nojekyll` marker. To redeploy after
+   changing `site/`, copy its contents onto `gh-pages` and push.
 2. In the Wix Studio editor, add one full-bleed "Embed a Site" iframe to
    the Home page inside a single `100vh` / zero-padding section (this
    can't be done via git — it's a one-time manual placement), with the
